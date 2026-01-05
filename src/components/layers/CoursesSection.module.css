@@ -101,6 +101,7 @@
 .courseGrid {
   display: grid;
   gap: 1rem;
+  align-items: stretch;
 }
 
 @media (min-width: 640px) {
@@ -185,6 +186,9 @@
   transition: all 0.3s ease-out;
   position: relative;
   overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 1024px) {
@@ -356,6 +360,9 @@
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.35s ease, opacity 0.25s ease, margin-top 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .cardBodyOpen {
@@ -392,6 +399,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s;
+  margin-top: auto;
 }
 
 .courseBtn:hover {

@@ -16,52 +16,56 @@ const courseCategories = [
   {
     icon: MonitorPlay,
     title: "Animation",
-    imageSrc:
-      "https://images.unsplash.com/photo-1536323760109-ca8c07450053?auto=format&fit=crop&w=1600&q=80",
+    imageSrc: "/uploads/web%20p/rh31c6rw5qyj7tha0kv6.webp",
     imageAlt: "Animation course",
-    description: "Bring stories to life through animation. Learn the art of movement, storytelling, and character animation using industry-standard tools.",
+    description:
+      "Bring stories to life with our animation course. Learn 2D animation, character animation, storyboarding, and animation principles using industry-standard tools. This course is ideal for beginners who want a career in animation.",
     gradient: styles.gradientPrimaryNeon,
-    courses: ["Character Animation", "Storyboarding", "Rigging"],
+    courses: ["animation course", "2D animation", "character animation"],
   },
   {
     icon: Sparkles,
     title: "VFX",
     imageSrc:
-      "https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&w=1600&q=80",
+      "/uploads/web%20p/ghxqqxlgematwrkjrywf.webp",
     imageAlt: "VFX course",
-    description: "Create what the camera can’t capture. Master visual effects from green screen to cinematic compositing and make imagination believable.",
+    description:
+      "Learn professional VFX techniques and visual effects that go beyond the camera. Our VFX course covers green screen, compositing, CG integration, and cinematic visual effects used in films and digital media.",
     gradient: styles.gradientNeonCyber,
-    courses: ["Green Screen", "Compositing", "CG Integration"],
+    courses: ["VFX course", "visual effects", "green screen", "compositing"],
   },
   {
     icon: Wand2,
     title: "Motion Graphics",
     imageSrc:
-      "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1600&q=80",
+      "/uploads/web%20p/g5qhpmctapzpwjjgpmlf.webp",
     imageAlt: "Motion graphics course",
-    description: "Design that moves. Messages that stick. Combine design, animation, and storytelling to create powerful motion visuals for digital media.",
+    description:
+      "Master motion graphics design and create visuals that move and communicate clearly. This motion graphics course teaches kinetic typography, visual storytelling, logo animation, and brand videos for digital platforms.",
     gradient: styles.gradientPrimaryElectric,
-    courses: ["Kinetic Typography", "Visual Storytelling", "Brand Spots"],
+    courses: ["motion graphics course", "motion graphics design", "logo animation"],
   },
   {
     icon: Palette,
     title: "Graphic Designing",
     imageSrc:
-      "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&fit=crop&w=1600&q=80",
+      "/uploads/web%20p/uw5apddwgglibwox2j9n.webp",
     imageAlt: "Graphic designing course",
-    description: "Design visuals that speak for brands. Learn fundamentals of design, branding, and visual communication to build systems that get noticed.",
+    description:
+      "Learn graphic designing from scratch and create visuals that build strong brands. This graphic design course covers branding, logo design, layout design, typography, and visual identity using professional design tools.",
     gradient: styles.gradientAccentVibrant,
-    courses: ["Branding", "Layout & Typography", "Visual Identity"],
+    courses: ["graphic designing course", "graphic design course", "logo design", "branding"],
   },
   {
     icon: Film,
     title: "Video Editing",
     imageSrc:
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80",
+      "/uploads/web%20p/yo98tajyhjnsd4rr9fex.webp",
     imageAlt: "Video editing course",
-    description: "Turn raw footage into impactful stories. Edit videos with pacing, emotion, and pro workflows used across YouTube, ads, and films.",
+    description:
+      "Master video editing and turn raw footage into professional videos. This video editing course teaches story editing, transitions, sound design, color correction, and editing workflows used for YouTube, ads, and films.",
     gradient: styles.gradientVibrantPrimary,
-    courses: ["Story Editing", "Transitions & FX", "Sound & Color"],
+    courses: ["video editing course", "professional video editing", "color correction", "sound design"],
   },
 ];
 

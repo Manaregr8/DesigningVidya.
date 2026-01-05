@@ -19,12 +19,12 @@ const quickLinks = [
 ];
 
 const courseCategories = [
-  "3D Animation",
-  "VFX & Compositing",
-  "Gaming & AR/VR",
-  "Graphic Design",
-  "UI/UX Design",
-  "Video Editing",
+   "Animation",
+    "VFX",
+  "Motion Graphics",
+   "Graphic Design",
+    // { name: "UI/UX Design", icon: Layout, href: "#courses" },
+    "Video Editing"
 ];
 
 const socialLinks = [
@@ -55,13 +55,13 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div className={styles.contactInfo}>
-              <a href="mailto:info@designingvidya.com" className={styles.contactLink}>
+              <a href="mailto:designingvidya3@gmail.com" className={styles.contactLink}>
                 <Mail className={styles.contactIcon} />
-                info@designingvidya.com
+                designingvidya3@gmail.com
               </a>
-              <a href="tel:+918287763710" className={styles.contactLink}>
+              <a href="tel:+917827250823" className={styles.contactLink}>
                 <Phone className={styles.contactIcon} />
-                +91 82877 63710
+                +91 78272 50823
               </a>
               <p className={styles.contactText}>
                 <MapPin className={`${styles.contactIcon} ${styles.contactIconTop}`} />

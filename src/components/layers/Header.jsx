@@ -17,11 +17,11 @@ import {
 import styles from "./Header.module.css";
 
 const courses = [
-  { name: "3D Animation", icon: Film, href: "#courses" },
-  { name: "VFX & Compositing", icon: MonitorPlay, href: "#courses" },
-  { name: "Gaming & AR/VR", icon: Gamepad2, href: "#courses" },
+  { name: "Animation", icon: Film, href: "#courses" },
+  { name: "VFX", icon: MonitorPlay, href: "#courses" },
+  { name: "Motion Graphics", icon: Gamepad2, href: "#courses" },
   { name: "Graphic Design", icon: Palette, href: "#courses" },
-  { name: "UI/UX Design", icon: Layout, href: "#courses" },
+  // { name: "UI/UX Design", icon: Layout, href: "#courses" },
   { name: "Video Editing", icon: Scissors, href: "#courses" },
 ];
 
@@ -38,7 +38,7 @@ export default function Header() {
             <span key={i} className={styles.marqueeText}>
               🎉 Designing Vidya Presents Exclusive Offers for a Limited Time! • 
               ✨ Admissions Open 2025 • 🏆 100% Placement Assistance • 
-              📞 Call: +91 82877 63710
+              📞 Call: +91 78272 50823
             </span>
           ))}
         </div>
@@ -108,9 +108,9 @@ export default function Header() {
 
             {/* CTA Buttons */}
             <div className={styles.ctaSection}>
-              <a href="tel:+918287763710" className={styles.phoneLink}>
+              <a href="tel:+917827250823" className={styles.phoneLink}>
                 <Phone className={styles.phoneIcon} />
-                <span className={styles.phoneText}>+91 82877 63710</span>
+                <span className={styles.phoneText}>+91 78272 50823</span>
               </a>
               <button className={styles.applyBtn}>
                 Apply Now

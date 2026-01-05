@@ -134,8 +134,13 @@ export default function TestimonialsSection() {
 
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.heading}>Stories from the Designing Vidya community</h2>
-          <p className={styles.subhead}>
+          <span className={styles.label}>Testimonials</span>
+          <h2 className={styles.heading}>
+            <span className={styles.headingWhite}>What Our Students Say</span>
+            <br />
+            <span className={styles.headingGradient}>About Designing Vidya</span>
+          </h2>
+          <p className={styles.description}>
             Curated notes from learners who tested bold ideas, shipped real work, and grew in public with mentors who tell it straight.
           </p>
         </div>

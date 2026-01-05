@@ -33,12 +33,38 @@
   margin-bottom: 2.5rem;
 }
 
+.label {
+  color: hsl(45, 100%, 50%);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .label {
+    font-size: 0.875rem;
+  }
+}
+
 .heading {
   margin-top: 0;
   font-size: 2.15rem;
   font-weight: 800;
   color: #f8fafc;
   line-height: 1.15;
+}
+
+.headingWhite {
+  color: #f8fafc;
+}
+
+.headingGradient {
+  background: linear-gradient(135deg, hsl(45, 100%, 50%) 0%, hsl(35, 100%, 45%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @media (min-width: 768px) {
@@ -48,6 +74,14 @@
 }
 
 .subhead {
+  margin: 1rem auto 1.5rem;
+  max-width: 720px;
+  color: rgba(226, 232, 240, 0.82);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.description {
   margin: 1rem auto 1.5rem;
   max-width: 720px;
   color: rgba(226, 232, 240, 0.82);

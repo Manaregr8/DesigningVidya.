@@ -1,55 +1,14 @@
 import styles from "./PlacementsSection.module.css";
 
-const companyLogos = [
-  {
-    name: "Netflix",
-    src: "https://cdn.worldvectorlogo.com/logos/netflix-4.svg",
-  },
-  {
-    name: "Amazon",
-    src: "https://cdn.worldvectorlogo.com/logos/amazon-icon-1.svg",
-  },
-  {
-    name: "Walt Disney",
-    src: "https://cdn.worldvectorlogo.com/logos/disney-2.svg",
-  },
-  {
-    name: "Sony",
-    src: "https://cdn.worldvectorlogo.com/logos/sony-2.svg",
-  },
-  {
-    name: "Ubisoft",
-    src: "https://cdn.worldvectorlogo.com/logos/ubisoft.svg",
-  },
-  {
-    name: "EA Games",
-    src: "https://cdn.worldvectorlogo.com/logos/ea-sports-1.svg",
-  },
-  {
-    name: "Rockstar Games",
-    src: "https://cdn.worldvectorlogo.com/logos/rockstar-games.svg",
-  },
-  {
-    name: "Pixar",
-    src: "https://cdn.worldvectorlogo.com/logos/pixar.svg",
-  },
-  {
-    name: "DreamWorks",
-    src: "https://cdn.worldvectorlogo.com/logos/dreamworks.svg",
-  },
-  {
-    name: "DNEG",
-    src: "https://cdn.worldvectorlogo.com/logos/dneg.svg",
-  },
-  {
-    name: "Technicolor",
-    src: "https://cdn.worldvectorlogo.com/logos/technicolor.svg",
-  },
-  {
-    name: "Framestore",
-    src: "https://cdn.worldvectorlogo.com/logos/framestore.svg",
-  },
-];
+// Only show a smaller, curated set of local logos (not all 24).
+// Update this list if you want different logo files.
+const SELECTED_LOGO_FILES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+const companyLogos = SELECTED_LOGO_FILES.map((fileNumber) => ({
+  name: `Recruiter ${fileNumber}`,
+  // Served from /public. Space must be URL-encoded.
+  src: `/uploads/design%20logo/${fileNumber}.png`,
+}));
 
 export default function PlacementsSection() {
   const midpoint = Math.ceil(companyLogos.length / 2);

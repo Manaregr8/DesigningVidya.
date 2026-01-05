@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import styles from "./ProcessInfrastructure.module.css";
 
+const publicImage = (filename) => `/uploads/compressed/${encodeURIComponent(filename)}`;
+
 const processSteps = [
   {
     number: "01",
@@ -43,50 +45,44 @@ const infrastructure = [
   {
     icon: Monitor,
     title: "Modern Workstations",
-    description: "High-spec systems tuned for VFX, design, and editing.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80",
+    description: "Learn video editing, animation, motion graphics, and VFX on high-performance systems.",
+    imageSrc: publicImage("18.webp"),
     imageAlt: "Studio workstation setup",
   },
   {
     icon: Video,
     title: "Studio-Style Classrooms",
-    description: "Immersive, production-like environments for hands-on learning.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80",
+    description: "Hands-on learning in studio-style classrooms with real creative tools.",
+    imageSrc: publicImage("classes with gulshan sir.webp"),
     imageAlt: "Classroom infrastructure",
   },
   {
     icon: Users,
     title: "Small Batch Learning",
-    description: "Focused cohorts so mentors can go deep on your work.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80",
+    description: "Small batches for personal attention and better learning results.",
+    imageSrc: publicImage("WhatsApp Image 2026-01-04 at 10.29.19.webp"),
     imageAlt: "Students learning together",
   },
   {
     icon: MessageSquare,
-    title: "Collaboration Zones",
-    description: "Spaces built for pair sessions, critiques, and team builds.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
+    title: "Creative Collaboration Spaces",
+    description: "Work together on video editing, animation, and motion graphics projects through team activities and reviews.",
+    imageSrc: publicImage("WhatsApp Image 2026-01-04 at 10.29.20.webp"),
     imageAlt: "Collaboration space",
   },
   {
     icon: Coffee,
-    title: "Creative Comforts",
-    description: "Acoustic-treated rooms, lounge corners, and good lighting.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=1600&q=80",
+    title: "Comfortable Creative Spaces",
+    description: "Well-lit rooms and calm spaces that help you focus on editing, animation, and VFX practice.",
+    imageSrc: publicImage("WhatsApp Image 2026-01-04 at 10.29.21.webp"),
     imageAlt: "Comfortable creative lounge",
   },
   {
     icon: Briefcase,
-    title: "Real Office Vibe",
+    title: "Industry Work Environment",
     description:
-      "Processes that mirror agency and studio delivery rhythms.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80",
+      "Experience a real agency-style workflow that prepares you for creative industry jobs.",
+    imageSrc: publicImage("WhatsApp Image 2025-03-27 at 3.42.30 PM.webp"),
     imageAlt: "Office-style environment",
   },
 ];
@@ -223,7 +219,7 @@ export default function ProcessInfrastructure() {
         <div className={styles.infraHeader}>
           <p className={styles.kicker}>Our Infrastructure</p>
           <h3 className={styles.infraHeading}>
-            Spaces built for real production work
+            Our learning environment
           </h3>
         </div>
 
