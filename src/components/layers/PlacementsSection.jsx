@@ -1,14 +1,57 @@
+// PlacementsSection.jsx
 import styles from "./PlacementsSection.module.css";
 
-// Only show a smaller, curated set of local logos (not all 24).
-// Update this list if you want different logo files.
-const SELECTED_LOGO_FILES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-
-const companyLogos = SELECTED_LOGO_FILES.map((fileNumber) => ({
-  name: `Recruiter ${fileNumber}`,
-  // Served from /public. Space must be URL-encoded.
-  src: `/uploads/design%20logo/${fileNumber}.png`,
-}));
+// Using well-known company logos from online sources
+const companyLogos = [
+  {
+    name: "prime-vedio",
+    src: "/uploads/dv-logo/amazon_prime_video-logo-brandlogo.net.png"
+  },
+  {
+    name: "bbc",
+    src: "/uploads/dv-logo/BBC.png"
+  },
+  {
+    name: "indian-today",
+    src: "/uploads/dv-logo/India Today.png"
+  },
+  {
+    name: "jio-star",
+    src: "/uploads/dv-logo/JS (1).png"
+  },
+  {
+    name: "Max",
+    src: "/uploads/dv-logo/Max.png"
+  },
+  {
+    name: "meta",
+    src: "/uploads/dv-logo/Meta.png"
+  },
+  {
+    name: "microsoft",
+    src: "/uploads/dv-logo/microsoft-logo_brandlogos.net_y0fjb.png"
+  },
+  {
+    name: "mx",
+    src: "/uploads/dv-logo/MTV.png"
+  },
+  {
+    name: "reliance",
+    src: "/uploads/dv-logo/Reliance.png"
+  },
+  {
+    name: "vediacom",
+    src: "/uploads/dv-logo/Viacom 18.png"
+  },
+  {
+    name: "youtube",
+    src: "/uploads/dv-logo/youtube_icon_2013-logo_brandlogos.net_m9dkf.png"
+  },
+  {
+    name: "zee",
+    src: "/uploads/dv-logo/Zee.png"
+  }
+];
 
 export default function PlacementsSection() {
   const midpoint = Math.ceil(companyLogos.length / 2);
@@ -39,27 +82,25 @@ export default function PlacementsSection() {
         <div className={styles.logosWrapper} aria-label="Recruiter company logos">
           <div className={styles.logosRow}>
             {firstRow.map((logo) => (
-              <div key={logo.name} className={styles.logoBadge}>
-                <img
-                  className={styles.logoImg}
-                  src={logo.src}
-                  alt={`${logo.name} logo`}
-                  loading="lazy"
-                />
-              </div>
+              <img
+                key={logo.name}
+                className={styles.logoImg}
+                src={logo.src}
+                alt={`${logo.name} logo`}
+                loading="lazy"
+              />
             ))}
           </div>
 
           <div className={styles.logosRow}>
             {secondRow.map((logo) => (
-              <div key={logo.name} className={styles.logoBadge}>
-                <img
-                  className={styles.logoImg}
-                  src={logo.src}
-                  alt={`${logo.name} logo`}
-                  loading="lazy"
-                />
-              </div>
+              <img
+                key={logo.name}
+                className={styles.logoImg}
+                src={logo.src}
+                alt={`${logo.name} logo`}
+                loading="lazy"
+              />
             ))}
           </div>
         </div>

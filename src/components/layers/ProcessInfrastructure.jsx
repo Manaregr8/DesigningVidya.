@@ -196,7 +196,7 @@ export default function ProcessInfrastructure() {
         <div className={styles.intro}>
           <p className={styles.kicker}>Our Process</p>
           <h2 id="process-heading" className={styles.heading}>
-            How We Take You from Beginner to Job-Ready Professional
+            How We Take You from Beginner to Job-<span>Ready Professional</span>
           </h2>
           <p className={styles.subheading}>
             A structured, mentor-led track that moves you from foundations to
