@@ -177,10 +177,15 @@ export default function HeroSection() {
                 Get Free Career Guidance
                 <ArrowRight className={styles.ctaIcon} />
               </button>
-              <button className={styles.ctaButtonSecondary}>
+              <a
+                href="https://wa.me/917827250823"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.ctaButtonSecondary}
+              >
                 <MessageCircle className={styles.ctaIcon} />
                 Talk to a Career Expert
-              </button>
+              </a>
             </div>
 
             <p className={styles.trustLine}>Trusted by 25,000+ aspiring creators</p>

@@ -348,6 +348,7 @@
 
 .ctaButtonSecondary:hover {
   transform: scale(1.05);
+  color: hsl(45, 100%, 50%);
   border-color: hsla(0, 0%, 60%, 0.8);
   background-color: hsla(0, 0%, 98%, 0.05);
 }
