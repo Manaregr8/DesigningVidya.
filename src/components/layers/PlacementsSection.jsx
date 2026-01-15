@@ -77,13 +77,14 @@ export default function PlacementsSection() {
         </div>
       </div>
 
-      {/* Company Logos (2 lines) */}
-      <div className={styles.container}>
-        <div className={styles.logosWrapper} aria-label="Recruiter company logos">
-          <div className={styles.logosRow}>
-            {firstRow.map((logo) => (
+      {/* Company Logos - Two Carousels */}
+      <div className={styles.carouselContainer}>
+        {/* First Carousel - Moving Left to Right */}
+        <div className={styles.carouselTrack}>
+          <div className={styles.carouselContent}>
+            {[...firstRow, ...firstRow, ...firstRow].map((logo, index) => (
               <img
-                key={logo.name}
+                key={`first-${logo.name}-${index}`}
                 className={styles.logoImg}
                 src={logo.src}
                 alt={`${logo.name} logo`}
@@ -91,11 +92,14 @@ export default function PlacementsSection() {
               />
             ))}
           </div>
+        </div>
 
-          <div className={styles.logosRow}>
-            {secondRow.map((logo) => (
+        {/* Second Carousel - Moving Left to Right */}
+        <div className={styles.carouselTrack}>
+          <div className={styles.carouselContent}>
+            {[...secondRow, ...secondRow, ...secondRow].map((logo, index) => (
               <img
-                key={logo.name}
+                key={`second-${logo.name}-${index}`}
                 className={styles.logoImg}
                 src={logo.src}
                 alt={`${logo.name} logo`}
