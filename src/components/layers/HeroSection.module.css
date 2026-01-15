@@ -450,31 +450,12 @@
     width: 100%;
   }
 
-  .mobileFormToggle {
-    display: block;
-  }
-
   .formCard {
-    max-height: 0;
-    opacity: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    pointer-events: none;
-  }
-
-  .formCard.expanded {
-    max-height: 1200px;
+    max-height: none;
     opacity: 1;
     padding: 1.5rem;
-    margin-top: 0.5rem;
+    margin-top: 0;
     pointer-events: auto;
-  }
-
-  .formCard.collapsed {
-    max-height: 0;
-    opacity: 0;
   }
 }
 
@@ -570,6 +551,16 @@
 .disclaimer {
   font-size: 0.75rem;
   color: hsl(0, 0%, 65%);
+}
+
+.error {
+  font-size: 0.75rem;
+  color: hsl(0, 100%, 70%);
+}
+
+.success {
+  font-size: 0.75rem;
+  color: hsl(120, 60%, 70%);
 }
 
 .submitBtn {

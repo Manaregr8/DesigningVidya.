@@ -1,12 +1,46 @@
 "use client";
-import { openApplyNowForm } from "@/lib/apply-now";
-
+import { useState } from "react";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import styles from "./HeroSection.module.css";
 
-
 export default function HeroSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    center: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitError("");
+    setSubmitSuccess(false);
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          pageUrl: typeof window !== "undefined" ? window.location.href : "",
+        }),
+      });
+      const data = await res.json().catch(() => null);
+      if (!res.ok || data?.ok === false) {
+        throw new Error(data?.error || "Failed to submit.");
+      }
+
+      setSubmitSuccess(true);
+      setFormData({ name: "", phone: "", email: "", center: "" });
+    } catch (err) {
+      setSubmitError(err?.message || "Failed to submit.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section className={styles.section}>
@@ -51,13 +85,13 @@ export default function HeroSection() {
 
             {/* CTA Button */}
             <div className={styles.ctaWrapper}>
-              <button
+              <a
+                href="#hero-form"
                 className={styles.ctaButtonPrimary}
-                onClick={openApplyNowForm}
               >
                 Get Free Career Guidance
                 <ArrowRight className={styles.ctaIcon} />
-              </button>
+              </a>
               <a
                 href="https://wa.me/917827250823"
                 target="_blank"
@@ -73,15 +107,65 @@ export default function HeroSection() {
           </div>
 
           {/* Right - Enquiry */}
-          <div className={styles.rightContent}>
-            <button
-              type="button"
-              className={styles.mobileFormButton}
-              onClick={openApplyNowForm}
-            >
-              Request Call Back
-              <ArrowRight className={styles.ctaIcon} />
-            </button>
+          <div className={styles.rightContent} id="hero-form">
+            <div className={styles.formCard}>
+              <h3 className={styles.formTitle}>Request Call Back</h3>
+              <form onSubmit={handleSubmit} className={styles.form}>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={e => setFormData({ ...formData, name: e.target.value })}
+                  className={styles.input}
+                  required
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone No."
+                  value={formData.phone}
+                  onChange={e => setFormData({ ...formData, phone: e.target.value })}
+                  className={styles.input}
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  value={formData.email}
+                  onChange={e => setFormData({ ...formData, email: e.target.value })}
+                  className={styles.input}
+                  required
+                />
+                <select
+                  value={formData.center}
+                  onChange={e => setFormData({ ...formData, center: e.target.value })}
+                  className={styles.select}
+                  required
+                >
+                  <option value="">Preferred Course</option>
+                  <option value="graphic-design">Graphic Design</option>
+                  <option value="animation">Animation</option>
+                  <option value="vfx">VFX</option>
+                  <option value="ui-ux">UI/UX Design</option>
+                  <option value="game-design">Game Design</option>
+                </select>
+                <p className={styles.disclaimer}>
+                  By clicking on &quot;Submit&quot;, I allow the company to call me and send program information on email/sms/phone.
+                </p>
+                {submitError && (
+                  <p className={styles.error}>
+                    {submitError}
+                  </p>
+                )}
+                {submitSuccess && (
+                  <p className={styles.success}>
+                    Submitted successfully!
+                  </p>
+                )}
+                <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
+                  {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
